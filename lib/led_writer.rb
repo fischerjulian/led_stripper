@@ -7,9 +7,9 @@ class LEDWriter
     @gpio_b = 24
 
     @io = WiringPi::GPIO.new do |gpio|
-      gpio.pin_mode(@gpio_r, WiringPi::OUTPUT)      
-      gpio.pin_mode(@gpio_g, WiringPi::OUTPUT)      
-      gpio.pin_mode(@gpio_b, WiringPi::OUTPUT)      
+      [17, 22, 24].each do |pin|
+        gpio.pin_mode(pin, WiringPi::OUTPUT)      
+      end      
     end
   end
 
