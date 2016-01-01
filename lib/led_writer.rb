@@ -6,8 +6,7 @@ class LEDWriter
     @gpio_g = 22
     @gpio_b = 24
 
-    @io = WiringPi::GPIO.new do |gpio|
-      gpio.pwm_set_range(255)
+    @io = WiringPi::GPIO.new do |gpio|      
 
       [17, 22, 24].each do |pin|
         gpio.pin_mode(pin, WiringPi::OUTPUT)      
