@@ -17,5 +17,6 @@ class LEDWriter
     @io.pwm_write(@gpio_r, color[0])
     @io.pwm_write(@gpio_g, color[1])
     @io.pwm_write(@gpio_b, color[2])
+    true
   end
 end
